@@ -86,7 +86,7 @@ function calculateGoldPrice() {
         const wastagePrice = wastageAmount * adjustedRate;
         const totalWeight = weight + wastageAmount;
         const goldPrice = totalWeight * adjustedRate;
-        const totalPrice = goldPrice + (makingCharges * weight);
+        const totalPrice = goldPrice + (makingCharges * weight) + wastagePrice;
 
         document.getElementById("result").style.display = "block";
         document.getElementById("result").innerHTML = `
